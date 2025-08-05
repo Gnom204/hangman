@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+.app {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.hangman {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+  border: 2px solid #333;
+  margin: 20px auto;
+  background-color: #f9f9f9;
+}
+
+/* Общие стили для всех частей тела */
+.hangman > div {
+  position: absolute;
+  background-color: #333;
+}
+
+/* Голова */
+.head {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  top: 50px;
+  left: 120px;
+}
+
+.smile {
+  position: absolute;
+  width: 40px;
+  height: 10px;
+  background-color: red;
+  border-radius: 0 0 80% 80%;
+  top: 40px;
+  left: 10px;
+}
+.unsmile {
+  position: absolute;
+  width: 40px;
+  height: 10px;
+  background-color: royalblue;
+  border-radius: 80% 80% 0 0;
+  top: 40px;
+  left: 10px;
+}
+
+/* Тело */
+.body {
+  width: 10px;
+  height: 100px;
+  top: 110px;
+  left: 145px;
+}
+
+/* Правая рука */
+.right-hand {
+  width: 70px;
+  height: 10px;
+  top: 130px;
+  left: 145px;
+  transform: rotate(-30deg);
+  transform-origin: left center;
+}
+
+/* Левая рука */
+.left-hand {
+  width: 70px;
+  height: 10px;
+  top: 130px;
+  left: 85px;
+  transform: rotate(30deg);
+  transform-origin: right center;
+}
+
+/* Правая нога */
+.right-leg {
+  width: 80px;
+  height: 10px;
+  top: 210px;
+  left: 145px;
+  transform: rotate(40deg);
+  transform-origin: left center;
+}
+
+/* Левая нога */
+.left-leg {
+  width: 80px;
+  height: 10px;
+  top: 210px;
+  left: 75px;
+  transform: rotate(-40deg);
+  transform-origin: right center;
+}
+
+.invisible {
+  opacity: 0;
+}
+
+.word {
+  width: 80vw;
+  display: flex;
+  font-size: 64px;
+  justify-content: space-around;
+}
+
+.letter {
+  font-size: 64px;
+  gap: 20px;
+}
+
+.input {
+  width: 100%;
+  padding: 15px 20px;
+  font-size: 18px;
+  font-family: "Arial", sans-serif;
+  color: #333;
+  background-color: #f8f8f8;
+  border: 2px solid #d3d3d3;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  text-transform: lowercase;
+}
+
+.input:active {
+  border: none;
+}
+
+.button {
+  padding: 20px;
+  font-size: 32px;
+}

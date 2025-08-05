@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Виселица</title>
+  </head>
+  <body>
+    <div id="app">
+      <form id="form">
+        <input type="text" class="input" id="word-input" />
+      </form>
+      <template id="template">
+        <div class="hangman">
+          <div class="invisible head" id="5">
+            <div class="invisible smile"></div>
+            <div class="invisible unsmile"></div>
+          </div>
+          <div class="invisible body" id="4"></div>
+          <div class="invisible right-hand" id="3"></div>
+          <div class="invisible left-hand" id="2"></div>
+          <div class="invisible right-leg" id="1"></div>
+          <div class="invisible left-leg" id="0"></div>
+        </div>
+      </template>
+      <div class="word"></div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
